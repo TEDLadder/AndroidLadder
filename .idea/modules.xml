@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidLadder.iml" filepath="$PROJECT_DIR$/AndroidLadder.iml" />
+      <module fileurl="file://C:\_code\Android\AsWorkspace\AndroidLadder\AndroidLadder.iml" filepath="C:\_code\Android\AsWorkspace\AndroidLadder\AndroidLadder.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\_code\Android\AsWorkspace\AndroidLadder\app\app.iml" filepath="C:\_code\Android\AsWorkspace\AndroidLadder\app\app.iml" />
     </modules>
   </component>
 </project>
