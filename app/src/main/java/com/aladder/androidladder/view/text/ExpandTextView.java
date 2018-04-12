@@ -62,7 +62,7 @@ public class ExpandTextView extends LinearLayout {
 
         mImageView = new ImageView(context);
         mImageView.setImageResource(R.mipmap.ic_launcher);
-        addView(mImageView, 120, 120);
+        addView(mImageView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         mImageView.setOnClickListener(mBtClickListener);
     }
 
@@ -90,7 +90,7 @@ public class ExpandTextView extends LinearLayout {
     };
 
     private void changeTextViewState() {
-        if (mNotOver) {
+        if (mNotOver || mAnimationProcessing) {
             return;
         }
 
