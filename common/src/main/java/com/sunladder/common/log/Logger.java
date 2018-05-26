@@ -54,7 +54,7 @@ public final class Logger {
     }
 
     private static String getSimpleClassName(String className) {
-        return !TextUtils.isEmpty(className) ? className.substring(className.lastIndexOf('.' + 1), className.length()) : "";
+        return !TextUtils.isEmpty(className) ? className.substring(className.lastIndexOf('.'), className.length()) : "";
     }
 
     private static String getPkgName(String className) {
