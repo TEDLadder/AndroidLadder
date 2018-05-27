@@ -1,4 +1,4 @@
-package com.sunladder.view.tantanbrowser;
+package com.sunladder.view.sample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.sunladder.view.R;
+import com.sunladder.view.tantanbrowser.CardLayoutHelper;
 
 import java.util.ArrayList;
 import java.util.List;

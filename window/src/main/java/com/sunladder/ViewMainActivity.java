@@ -36,7 +36,8 @@ public class ViewMainActivity extends AppCompatActivity {
 
     private void initItems() {
         mList.add(new ViewItemBean("expand text view", "com.sunladder.view.text.ExpandTextViewAct"));
-        mList.add(new ViewItemBean("tantan pic browser", "com.sunladder.view.tantanbrowser.TantanBrowserAct"));
+        mList.add(new ViewItemBean("tantan pic browser", "com.sunladder.view.sample.TantanBrowserAct"));
+        mList.add(new ViewItemBean("pic nine", "com.sunladder.view.sample.PicNineGridAct"));
     }
 
     private void initList() {

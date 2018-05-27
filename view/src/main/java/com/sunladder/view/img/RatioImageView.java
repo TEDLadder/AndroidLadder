@@ -1,6 +1,7 @@
 package com.sunladder.view.img;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
@@ -22,6 +23,8 @@ public class RatioImageView extends AppCompatImageView {
 
     public RatioImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setScaleType(ScaleType.FIT_XY);
+        setBackground(new ColorDrawable(context.getColor(android.R.color.holo_blue_light)));
     }
 
     public void setRatio(float ratio) {
