@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +31,8 @@ public class ViewMainActivity extends AppCompatActivity {
 
         initItems();
         initList();
+
+        startDefault();
     }
 
     private void initItems() {
@@ -45,12 +46,15 @@ public class ViewMainActivity extends AppCompatActivity {
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
+    private void startDefault() {
+        startAct("com.sunladder.view.sample.PicNineGridAct");
+    }
+
     private void startAct(String clazzName) {
         Intent intent = new Intent();
         intent.setClassName(this, clazzName);
         startActivity(intent);
     }
-
 
     private class ViewItemHolder extends RecyclerView.ViewHolder {
         public ViewItemHolder(View itemView) {

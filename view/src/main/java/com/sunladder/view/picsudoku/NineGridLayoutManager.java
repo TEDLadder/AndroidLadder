@@ -6,15 +6,24 @@ import android.view.ViewGroup;
 
 /**
  * Created by Sun on 2018/5/27.
+ * <p>
+ * TODO:1.recycler回收 2.itemDecoration支持
  */
 
 public class NineGridLayoutManager extends RecyclerView.LayoutManager {
 
     private final int mPicCount;
-    private int mDividerWidth = 15;
+    private final int mDividerWidth;
 
     public NineGridLayoutManager(int picCount) {
+        this(picCount, 0);
+    }
+
+    public NineGridLayoutManager(int picCount, int dividerWidth) {
         mPicCount = picCount;
+        mDividerWidth = dividerWidth;
+
+        setAutoMeasureEnabled(true);
     }
 
     @Override
@@ -23,14 +32,9 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
     }
 
     @Override
-    public void onLayoutCompleted(RecyclerView.State state) {
-    }
-
-    @Override
     public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
-        // TODO: 2018/5/27 弄明白recyclerview回收
-        removeAllViews();
         // 在布局之前，将所有的子 View 先 Detach 掉，放入到 Scrap 缓存中
+        removeAllViews();
         detachAndScrapAttachedViews(recycler);
 
         int itemCount = getItemCount();
@@ -81,82 +85,59 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
         handleChild(recycler, state, Math.min(9, getItemCount()), 3, 3);
     }
 
-    private void handleChild(RecyclerView.Recycler recycler, RecyclerView.State state, final int maxSize, final int columnSize, final int realSize) {
-        final int dividerWidth = mDividerWidth;
-        final int partDividerWidth = dividerWidth / (columnSize - 1);
+    private void handleChild(RecyclerView.Recycler recycler, RecyclerView.State state, final int maxSize, final int columnSize, final int showNumPerLine) {
+        if (showNumPerLine > columnSize) {
+            throw new RuntimeException("showNumPerLine cannot be more than columnSize!");
+        }
+        //分割线
+        int dividerWidth = mDividerWidth;
+        //基本数据准备
+        int width = getWidth();
+        int paddingLeft = getPaddingLeft();
+        int paddingTop = getPaddingTop();
+        int paddingRight = getPaddingRight();
 
-        final int width = getWidth();
+        //长度矫正,如有剩余作居中处理
+        int usefulWidth = width - paddingLeft - paddingRight - (columnSize - 1) * dividerWidth;
+        int itemWidth = (usefulWidth) / columnSize;
+        int remainWidth = usefulWidth - itemWidth * columnSize;
+        remainWidth = remainWidth % 2 == 0 ? remainWidth : remainWidth + 1;
 
-        final int paddingLeft = getPaddingLeft();
-        final int paddingRight = getPaddingRight();
+        //边界值
+        final int borderLeft = paddingLeft + remainWidth / 2;
+        final int borderRight = getWidth() - paddingRight - remainWidth / 2;
 
-        final int itemWidth = (width - paddingLeft - paddingRight) / columnSize;
-
-        int layoutTop = getPaddingTop();
+        int layoutLeft = borderLeft;
+        int layoutRight = 0;
+        int layoutTop = paddingTop;
         int layoutBottom = 0;
 
-        for (int i = 0; i < maxSize; i++) {
+        for (int i = 0, column; i < getItemCount(); i++, layoutLeft = layoutRight + dividerWidth) {
             View childView = recycler.getViewForPosition(0);
             if (childView == null) {
                 continue;
             }
+            //改变childView宽度
             ViewGroup.LayoutParams layoutParams = childView.getLayoutParams();
             layoutParams.width = itemWidth;
             addView(childView);
             measureChild(childView, 0, 0);
             int measuredHeight = childView.getMeasuredHeight();
 
-            int column = i % realSize;
-
-            boolean noLeftHalfDivider = column == 0;
-            boolean noRightHalfDivider = column == (columnSize - 1);
-            if (column == 0 && i > 0) {
-                layoutTop = layoutBottom + dividerWidth;
-            }
-
-            int left = paddingLeft + column * itemWidth + (noLeftHalfDivider ? 0 : partDividerWidth);
-            int right = left + itemWidth - (noRightHalfDivider ? 0 : partDividerWidth);
+            //布局位置计算
+            column = i % showNumPerLine;
             if (column == 0) {
+                layoutLeft = borderLeft;
+                if (i > 0) {
+                    layoutTop = layoutBottom + dividerWidth;
+                }
                 layoutBottom = layoutTop + measuredHeight;
             }
-            layoutDecorated(childView, left, layoutTop, right, layoutBottom);
+            layoutRight = layoutLeft + itemWidth;
+            if (column == columnSize - 1) {
+                layoutRight = Math.min(layoutRight, borderRight);
+            }
+            layoutDecorated(childView, layoutLeft, layoutTop, layoutRight, layoutBottom);
         }
     }
-
-//    private void handleChild(final int maxSize, final int columnSize) {
-//        final int dividerWidth = mDividerWidth;
-//
-//        final int width = getWidth();
-//
-//        final int paddingLeft = getPaddingLeft();
-//        final int paddingRight = getPaddingRight();
-//
-//        final int stepX = (width - paddingLeft - paddingRight - (columnSize - 1) * dividerWidth) / columnSize;
-//
-//        int layoutX = 0;
-//        int layoutY = 0;
-//        int nextY = 0;
-//
-//        for (int i = 0; i < maxSize; i++) {
-//            View childView = getChildAt(0);
-//            if (childView == null) {
-//                continue;
-//            }
-//            int column = i % columnSize;
-//            if (column == 0) {
-//                layoutX = paddingLeft;
-//                layoutY = nextY + dividerWidth;
-//            }
-//
-//            measureChild(childView, 0, 0);
-//            int measuredHeight = childView.getMeasuredHeight();
-//
-//            if (column == 0) {
-//                nextY = layoutY + measuredHeight;
-//            }
-//            layoutDecorated(childView, layoutX, layoutY, layoutX + stepX, nextY);
-//            layoutX += dividerWidth;
-//        }
-//    }
-
 }
