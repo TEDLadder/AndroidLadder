@@ -1,34 +1,30 @@
 package com.sunladder.view.picsudoku;
 
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.Recycler;
 import android.view.View;
 import android.view.ViewGroup;
+import com.sunladder.common.log.Logger;
 
 /**
  * Created by Sun on 2018/5/27.
  * <p>
- * TODO:1.recycler回收 2.itemDecoration支持
+ * TODO:1.recycler回收
  */
 
-public class NineGridLayoutManager extends RecyclerView.LayoutManager {
+class NineGridLayoutManager extends RecyclerView.LayoutManager {
 
-    private final int mPicCount;
     private final int mDividerWidth;
 
-    public NineGridLayoutManager(int picCount) {
-        this(picCount, 0);
-    }
-
-    public NineGridLayoutManager(int picCount, int dividerWidth) {
-        mPicCount = picCount;
-        mDividerWidth = dividerWidth;
-
+    NineGridLayoutManager(int dividerWidth) {
+        mDividerWidth = Math.max(0, dividerWidth);
         setAutoMeasureEnabled(true);
     }
 
     @Override
     public RecyclerView.LayoutParams generateDefaultLayoutParams() {
-        return new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        return new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
     }
 
     @Override
@@ -38,13 +34,21 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
         detachAndScrapAttachedViews(recycler);
 
         int itemCount = getItemCount();
-        if (mPicCount == 1 && itemCount >= 1) {
+        if (itemCount == 1) {
             layoutOne(recycler, state);
-        } else if (mPicCount == 4 && itemCount >= 4) {
+        } else if (itemCount == 4) {
             layoutFour(recycler, state);
         } else {
             layoutNormal(recycler, state);
         }
+    }
+
+    @Override
+    public void onDetachedFromWindow(RecyclerView view, Recycler recycler) {
+        super.onDetachedFromWindow(view, recycler);
+        Logger.printCurrentMethod();
+        removeAndRecycleAllViews(recycler);
+        recycler.clear();
     }
 
     /**
@@ -85,7 +89,8 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
         handleChild(recycler, state, Math.min(9, getItemCount()), 3, 3);
     }
 
-    private void handleChild(RecyclerView.Recycler recycler, RecyclerView.State state, final int maxSize, final int columnSize, final int showNumPerLine) {
+    private void handleChild(RecyclerView.Recycler recycler, RecyclerView.State state,
+            final int maxSize, final int columnSize, final int showNumPerLine) {
         if (showNumPerLine > columnSize) {
             throw new RuntimeException("showNumPerLine cannot be more than columnSize!");
         }
@@ -112,7 +117,7 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
         int layoutTop = paddingTop;
         int layoutBottom = 0;
 
-        for (int i = 0, column; i < getItemCount(); i++, layoutLeft = layoutRight + dividerWidth) {
+        for (int i = 0, column; i < maxSize; i++, layoutLeft = layoutRight + dividerWidth) {
             View childView = recycler.getViewForPosition(0);
             if (childView == null) {
                 continue;
@@ -120,6 +125,7 @@ public class NineGridLayoutManager extends RecyclerView.LayoutManager {
             //改变childView宽度
             ViewGroup.LayoutParams layoutParams = childView.getLayoutParams();
             layoutParams.width = itemWidth;
+            layoutParams.height = itemWidth;
             addView(childView);
             measureChild(childView, 0, 0);
             int measuredHeight = childView.getMeasuredHeight();

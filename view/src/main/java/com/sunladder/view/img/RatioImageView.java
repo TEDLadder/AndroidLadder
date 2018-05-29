@@ -41,8 +41,7 @@ public class RatioImageView extends AppCompatImageView {
         int measuredWidth = getMeasuredWidth();
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 
-        if (heightMode != MeasureSpec.EXACTLY) {
-            setMeasuredDimension(measuredWidth, (int) (measuredWidth * mRatio));
-        }
+        // TODO: 2018/5/29 模式判断,有上限
+        setMeasuredDimension(measuredWidth, (int) (measuredWidth * mRatio));
     }
 }

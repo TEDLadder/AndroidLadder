@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PicPanel">
+        <attr name="showType">
+            <flag name="nineGrid" value="0"/>
+            <flag name="faceBook" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

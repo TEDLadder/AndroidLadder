@@ -2,40 +2,42 @@ package com.sunladder.view.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.LayoutParams;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-
 import com.sunladder.view.R;
-import com.sunladder.view.img.RatioImageView;
-import com.sunladder.view.picsudoku.NineGridLayoutManager;
-
+import com.sunladder.view.picsudoku.PicPanel;
+import com.sunladder.view.picsudoku.PicPanelBean;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PicNineGridAct extends AppCompatActivity {
 
-    public static final int PIC_COUNT = 5;
-
-    private final List<String> mList = new ArrayList<>();
+    private final List<List<PicPanelBean>> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_nine_grid);
 
-        for (int i = 0; i < PIC_COUNT; i++) {
-            mList.add(i + "");
+        for (int i = 1; i <= 10; i++) {
+            List<PicPanelBean> childList = new ArrayList<>(i);
+            for (int i1 = 0; i1 < i; i1++) {
+                childList.add(new PicPanelBean(0, 0, null, null));
+            }
+            mList.add(childList);
         }
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.nine_pic_list);
-        NineGridLayoutManager layoutManager = new NineGridLayoutManager(PIC_COUNT, 15);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(new ViewItemAdapter());
     }
 
     private class ViewItemHolder extends RecyclerView.ViewHolder {
+
         public ViewItemHolder(View itemView) {
             super(itemView);
         }
@@ -45,8 +47,9 @@ public class PicNineGridAct extends AppCompatActivity {
 
         @Override
         public ViewItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            RatioImageView view = new RatioImageView(PicNineGridAct.this);
-            RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(RecyclerView.LayoutParams.WRAP_CONTENT, RecyclerView.LayoutParams.WRAP_CONTENT);
+            PicPanel view = new PicPanel(PicNineGridAct.this);
+            RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
+                    LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT);
             view.setLayoutParams(layoutParams);
             return new ViewItemHolder(view);
         }
@@ -54,9 +57,11 @@ public class PicNineGridAct extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViewItemHolder holder, int position) {
             View itemView = holder.itemView;
-            ImageView imgView = itemView instanceof ImageView ? ((ImageView) itemView) : null;
+            PicPanel imgView = itemView instanceof PicPanel ? ((PicPanel) itemView) : null;
             if (imgView != null) {
-                imgView.setImageResource(R.mipmap.ic_launcher);
+                List<PicPanelBean> beanList = mList.get(position);
+                imgView.config(PicPanel.MODE_NINE_GRID, 15);
+                imgView.setPicList(beanList);
             }
         }
 

@@ -1,9 +1,10 @@
-package com.sunladder.view.text;
+package com.sunladder.view.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.sunladder.view.R;
+import com.sunladder.view.text.ExpandTextView;
 
 
 public class ExpandTextViewAct extends AppCompatActivity {

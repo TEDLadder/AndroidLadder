@@ -3,7 +3,7 @@
           package="com.sunladder.view">
 
     <application>
-        <activity android:name=".text.ExpandTextViewAct">
+        <activity android:name=".sample.ExpandTextViewAct">
         </activity>
         <activity android:name=".sample.TantanBrowserAct">
         </activity>
