@@ -1,10 +1,9 @@
-package com.sunladder.view.picsudoku;
+package com.sunladder.view.pic.display;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Recycler;
 import android.view.View;
 import android.view.ViewGroup;
-import com.sunladder.common.log.Logger;
 
 /**
  * Created by Sun on 2018/5/27.
@@ -46,7 +45,6 @@ class NineGridLayoutManager extends RecyclerView.LayoutManager {
     @Override
     public void onDetachedFromWindow(RecyclerView view, Recycler recycler) {
         super.onDetachedFromWindow(view, recycler);
-        Logger.printCurrentMethod();
         removeAndRecycleAllViews(recycler);
         recycler.clear();
     }
@@ -54,7 +52,7 @@ class NineGridLayoutManager extends RecyclerView.LayoutManager {
     /**
      * 单图 宽占屏幕二分之一
      */
-    protected void layoutOne(RecyclerView.Recycler recycler, RecyclerView.State state) {
+    void layoutOne(RecyclerView.Recycler recycler, RecyclerView.State state) {
         View childView = recycler.getViewForPosition(0);
         if (childView != null) {
             final int paddingLeft = getPaddingLeft();
@@ -78,14 +76,14 @@ class NineGridLayoutManager extends RecyclerView.LayoutManager {
     /**
      * 4图 两行两列 宽占屏幕三分之二
      */
-    protected void layoutFour(RecyclerView.Recycler recycler, RecyclerView.State state) {
+    void layoutFour(RecyclerView.Recycler recycler, RecyclerView.State state) {
         handleChild(recycler, state, 4, 3, 2);
     }
 
     /**
      * 正常九宫格排列
      */
-    protected void layoutNormal(RecyclerView.Recycler recycler, RecyclerView.State state) {
+    void layoutNormal(RecyclerView.Recycler recycler, RecyclerView.State state) {
         handleChild(recycler, state, Math.min(9, getItemCount()), 3, 3);
     }
 

@@ -9,12 +9,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViewMainActivity extends AppCompatActivity {
 
@@ -36,13 +34,16 @@ public class ViewMainActivity extends AppCompatActivity {
     }
 
     private void initItems() {
-        mList.add(new ViewItemBean("expand text view", "com.sunladder.view.sample.ExpandTextViewAct"));
-        mList.add(new ViewItemBean("tantan pic browser", "com.sunladder.view.sample.TantanBrowserAct"));
+        mList.add(new ViewItemBean("expand text view",
+                "com.sunladder.view.sample.ExpandTextViewAct"));
+        mList.add(new ViewItemBean("tantan pic browser",
+                "com.sunladder.view.sample.TantanBrowserAct"));
         mList.add(new ViewItemBean("pic nine", "com.sunladder.view.sample.PicNineGridAct"));
     }
 
     private void initList() {
-        mViewMainList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        mViewMainList.setLayoutManager(
+                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
@@ -57,6 +58,7 @@ public class ViewMainActivity extends AppCompatActivity {
     }
 
     private class ViewItemHolder extends RecyclerView.ViewHolder {
+
         public ViewItemHolder(View itemView) {
             super(itemView);
         }
@@ -69,7 +71,8 @@ public class ViewMainActivity extends AppCompatActivity {
             TextView textView = new TextView(parent.getContext());
             textView.setGravity(Gravity.CENTER);
             textView.setPadding(0, 30, 0, 30);
-            RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, 120);
+            RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
+                    RecyclerView.LayoutParams.MATCH_PARENT, 120);
             textView.setLayoutParams(layoutParams);
             return new ViewItemHolder(textView);
         }
@@ -97,6 +100,7 @@ public class ViewMainActivity extends AppCompatActivity {
     }
 
     private class ViewItemBean {
+
         String viewName;
         String viewAct;
 

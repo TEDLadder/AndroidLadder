@@ -1,4 +1,4 @@
-package com.sunladder.view.picsudoku;
+package com.sunladder.view.pic.display;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView.LayoutParams;
 import android.view.View;
 import android.view.ViewGroup;
 import com.sunladder.view.R;
-import com.sunladder.view.picsudoku.PicPanel;
-import com.sunladder.view.picsudoku.PicPanelBean;
+import com.sunladder.view.pic.display.PicPanel;
+import com.sunladder.view.pic.display.PicPanelBean;
 import java.util.ArrayList;
 import java.util.List;
 
