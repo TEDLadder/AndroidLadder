@@ -1,2 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sunladder.common"/>
+          package="com.sunladder.common">
+
+    <application>
+        <activity android:name=".sample.RxTestAct">
+        </activity>
+    </application>
+
+</manifest>

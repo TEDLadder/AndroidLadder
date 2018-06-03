@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sunladder.view.sample.PicNineGridAct">
+    tools:context="com.sunladder.view.sample.PicPanelAct">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/nine_pic_list"

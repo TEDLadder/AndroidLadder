@@ -13,7 +13,7 @@ import com.sunladder.view.pic.display.PicPanelBean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PicNineGridAct extends AppCompatActivity {
+public class PicPanelAct extends AppCompatActivity {
 
     private final List<List<PicPanelBean>> mList = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class PicNineGridAct extends AppCompatActivity {
 
         @Override
         public ViewItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            PicPanel view = new PicPanel(PicNineGridAct.this);
+            PicPanel view = new PicPanel(PicPanelAct.this);
             RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
                     LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT);
             view.setLayoutParams(layoutParams);

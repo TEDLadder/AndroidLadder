@@ -9,10 +9,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ViewMainActivity extends AppCompatActivity {
 
@@ -38,7 +40,8 @@ public class ViewMainActivity extends AppCompatActivity {
                 "com.sunladder.view.sample.ExpandTextViewAct"));
         mList.add(new ViewItemBean("tantan pic browser",
                 "com.sunladder.view.sample.TantanBrowserAct"));
-        mList.add(new ViewItemBean("pic nine", "com.sunladder.view.sample.PicNineGridAct"));
+        mList.add(new ViewItemBean("pic nine", "com.sunladder.view.sample.PicPanelAct"));
+        mList.add(new ViewItemBean("rx test", "com.sunladder.common.sample.RxTestAct"));
     }
 
     private void initList() {
@@ -48,7 +51,7 @@ public class ViewMainActivity extends AppCompatActivity {
     }
 
     private void startDefault() {
-        startAct("com.sunladder.view.sample.PicNineGridAct");
+        startAct("com.sunladder.common.sample.RxTestAct");
     }
 
     private void startAct(String clazzName) {
