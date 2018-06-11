@@ -10,7 +10,7 @@ import android.util.Log;
 public final class Logger {
 
     private static final String CLASS_NAME = Logger.class.getName();
-    private static final String LOG_PREFFIX = "Test|";
+    private static final String LOG_PREFFIX = "Logger|";
     private static final boolean DEBUG = true;
 
     public static void printMsg(String msg) {
@@ -43,6 +43,16 @@ public final class Logger {
         String className = element.getClassName();
         String methodInfo = String.format("%s%s->%s:%d", preffix, getSimpleClassName(className), element.getMethodName(), element.getLineNumber());
         print(getPkgName(className), methodInfo);
+    }
+
+    public static void printCurrentThread(String tag) {
+        if (!DEBUG) {
+            return;
+        }
+        Thread currentThread = Thread.currentThread();
+        String name = currentThread.getName();
+        String state = currentThread.getState().name();
+        print(tag, name + " " + state);
     }
 
     private static void print(String tag, String msg) {
