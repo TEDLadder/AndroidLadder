@@ -1,14 +1,13 @@
-package com.sunladder.common.sample;
+package com.sunladder.test.rx;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import com.sunladder.common.R;
 import com.sunladder.common.log.Logger;
-
+import com.sunladder.test.R;
 import rx.Observable;
 import rx.Observer;
 import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.observables.SyncOnSubscribe;
 
 public class RxTestAct extends AppCompatActivity {
@@ -20,8 +19,24 @@ public class RxTestAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_test);
 
-        roundOne();
+        roundTwo();
     }
+
+    private void roundTwo() {
+        Observable.just(0)
+                .flatMap(new Func1<Integer, Observable<?>>() {
+                    @Override
+                    public Observable<Integer> call(Integer integer) {
+                        return Observable.just(integer);
+                    }
+                })
+                .subscribe(new Action1<Object>() {
+                    @Override
+                    public void call(Object o) {
+                    }
+                });
+    }
+
 
     /**
      * create&just producer差异

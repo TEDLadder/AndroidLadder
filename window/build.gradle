@@ -43,4 +43,5 @@ dependencies {
 
     // part
     compile project(':view')
+    compile project(':test')
 }
