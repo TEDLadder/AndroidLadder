@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sunladder.test.rx.RxTestAct">
+    tools:context="com.sunladder.test.sample.RxTestAct">
 
     <TextView
         android:layout_width="wrap_content"

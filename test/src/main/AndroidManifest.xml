@@ -3,7 +3,7 @@
     package="com.sunladder.test">
 
     <application>
-        <activity android:name="com.sunladder.test.rx.RxTestAct">
+        <activity android:name="com.sunladder.test.sample.RxTestAct">
         </activity>
     </application>
 
