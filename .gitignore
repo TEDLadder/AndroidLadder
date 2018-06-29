@@ -1,10 +1,13 @@
 # dirs
-.idea/
+.idea/*
+!.idea/workspace.xml
+!.idea/modules.xml
+!.idea/gradle.xml
+
 .gradle/
 build/
+test/
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 /captures
 .DS_Store
 .externalNativeBuild

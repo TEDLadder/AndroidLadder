@@ -1,22 +1,20 @@
 package com.sunladder;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class ViewMainActivity extends AppCompatActivity {
+public class ViewMainActivity extends Activity {
 
     @BindView(R.id.view_main_list)
     RecyclerView mViewMainList;
@@ -32,7 +30,7 @@ public class ViewMainActivity extends AppCompatActivity {
         initItems();
         initList();
 
-        startDefault();
+//        startDefault();
     }
 
     private void initItems() {
