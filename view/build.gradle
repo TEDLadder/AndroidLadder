@@ -34,7 +34,8 @@ dependencies {
 
     //view
     api 'com.android.support:recyclerview-v7:26.1.0'
-    api 'com.android.support.constraint:constraint-layout:1.1.0'
+    api 'com.android.support.constraint:constraint-layout:1.1.2'
+    api 'com.android.support:design:26.1.0'
 
     api project(':common')
 }

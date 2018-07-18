@@ -30,7 +30,7 @@ public class ViewMainActivity extends Activity {
         initItems();
         initList();
 
-//        startDefault();
+        startDefault();
     }
 
     private void initItems() {
@@ -40,6 +40,8 @@ public class ViewMainActivity extends Activity {
                 "com.sunladder.view.sample.TantanBrowserAct"));
         mList.add(new ViewItemBean("pic nine", "com.sunladder.view.sample.PicPanelAct"));
         mList.add(new ViewItemBean("rx test", "com.sunladder.test.sample.RxTestAct"));
+        mList.add(new ViewItemBean("clayout 5 scroll types",
+                "com.sunladder.view.coordinator.ClayoutNormalActivity"));
     }
 
     private void initList() {
@@ -49,7 +51,7 @@ public class ViewMainActivity extends Activity {
     }
 
     private void startDefault() {
-        startAct("com.sunladder.test.sample.RxTestAct");
+        startAct(mList.get(mList.size() - 1).viewAct);
     }
 
     private void startAct(String clazzName) {

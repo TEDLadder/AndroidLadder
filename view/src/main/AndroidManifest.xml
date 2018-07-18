@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sunladder.view">
+    package="com.sunladder.view">
 
     <application>
         <activity android:name=".sample.ExpandTextViewAct">
@@ -8,6 +8,8 @@
         <activity android:name=".sample.TantanBrowserAct">
         </activity>
         <activity android:name=".sample.PicPanelAct">
+        </activity>
+        <activity android:name=".coordinator.ClayoutNormalActivity">
         </activity>
     </application>
 
