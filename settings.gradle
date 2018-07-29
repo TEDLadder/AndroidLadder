@@ -1,1 +1,5 @@
-include ':window', ':view', ':common', ':test'
+include ':window'
+include ':view'
+include ':common'
+include ':test'
+//include ':kotlin'
