@@ -20,7 +20,7 @@ public class PicPanelAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pic_nine_grid);
+        setContentView(R.layout.view_activity_pic_nine_grid);
 
         for (int i = 1; i <= 10; i++) {
             List<PicPanelBean> childList = new ArrayList<>(i);

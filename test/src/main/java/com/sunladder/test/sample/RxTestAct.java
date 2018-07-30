@@ -10,7 +10,7 @@ public class RxTestAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rx_test);
+        setContentView(R.layout.test_activity_rx_test);
 
         // rxjava简单实现
 //        new RxMine().run();

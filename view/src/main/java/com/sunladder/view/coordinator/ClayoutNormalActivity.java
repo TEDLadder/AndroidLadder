@@ -19,7 +19,7 @@ public class ClayoutNormalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clayout_normal);
+        setContentView(R.layout.view_activity_clayout_normal);
         setSupportActionBar(null);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar1);
