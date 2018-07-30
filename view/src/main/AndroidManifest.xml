@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sunladder.view">
 
-    <application>
+    <application
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
         <activity android:name=".sample.ExpandTextViewAct">
         </activity>
         <activity android:name=".sample.TantanBrowserAct">
@@ -10,6 +12,8 @@
         <activity android:name=".sample.PicPanelAct">
         </activity>
         <activity android:name=".coordinator.ClayoutNormalActivity">
+        </activity>
+        <activity android:name=".constraint.TestConstraintActivity">
         </activity>
     </application>
 

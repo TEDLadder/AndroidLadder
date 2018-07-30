@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:paddingTop="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--2:1 默认 高比宽-->
+    <View
+        android:id="@+id/view1"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#f00"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--H,2:1 等价于不写-->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#0f0"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <!--W,2:1 宽作分母-->
+    <View
+        android:id="@+id/view3"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#00f"
+        app:layout_constraintDimensionRatio="W,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+</android.support.constraint.ConstraintLayout>
