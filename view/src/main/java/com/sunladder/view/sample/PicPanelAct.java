@@ -49,7 +49,7 @@ public class PicPanelAct extends AppCompatActivity {
         public ViewItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             PicPanel view = new PicPanel(PicPanelAct.this);
             RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
-                    LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT);
+                    LayoutParams.WRAP_CONTENT, RecyclerView.LayoutParams.WRAP_CONTENT);
             view.setLayoutParams(layoutParams);
             return new ViewItemHolder(view);
         }

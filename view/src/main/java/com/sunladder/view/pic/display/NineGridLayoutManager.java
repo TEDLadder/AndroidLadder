@@ -120,6 +120,8 @@ class NineGridLayoutManager extends RecyclerView.LayoutManager {
             if (childView == null) {
                 continue;
             }
+            int width1 = childView.getWidth();
+            int height1 = childView.getHeight();
             //改变childView宽度
             ViewGroup.LayoutParams layoutParams = childView.getLayoutParams();
             layoutParams.width = itemWidth;

@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.google.android.flexbox.FlexWrap;
+import com.google.android.flexbox.FlexboxLayout;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,19 @@ public class ViewMainActivity extends Activity {
         initItems();
         initList();
 
-        startDefault();
+//        startDefault();
+
+        FlexboxLayout view = findViewById(R.id.flex);
+        view.setFlexWrap(FlexWrap.WRAP);
+        for (int i = 0; i < 50; i++) {
+            TextView textView = new TextView(this);
+            textView.setGravity(Gravity.CENTER);
+            textView.setText(i + "");
+            textView.setBackgroundResource(R.drawable.drawable);
+            FlexboxLayout.LayoutParams layoutParams = new FlexboxLayout.LayoutParams(
+                    133, 133);
+            view.addView(textView, layoutParams);
+        }
     }
 
     private void initItems() {
@@ -51,7 +65,7 @@ public class ViewMainActivity extends Activity {
     }
 
     private void startDefault() {
-        startAct(mList.get(mList.size() - 1).viewAct);
+        startAct(mList.get(2).viewAct);
     }
 
     private void startAct(String clazzName) {
