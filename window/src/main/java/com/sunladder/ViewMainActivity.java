@@ -3,16 +3,19 @@ package com.sunladder;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.google.android.flexbox.FlexWrap;
-import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayoutManager;
+import com.sunladder.view.tag.MeasureStrategy;
+import com.sunladder.view.tag.MeasureStrategy.Builder;
+import com.sunladder.view.tag.MeasureStrategy.DefaultMeasureStrategyGroup;
+import com.sunladder.view.tag.TagLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,17 +37,20 @@ public class ViewMainActivity extends Activity {
 
 //        startDefault();
 
-        FlexboxLayout view = findViewById(R.id.flex);
-        view.setFlexWrap(FlexWrap.WRAP);
-        for (int i = 0; i < 50; i++) {
-            TextView textView = new TextView(this);
-            textView.setGravity(Gravity.CENTER);
-            textView.setText(i + "");
-            textView.setBackgroundResource(R.drawable.drawable);
-            FlexboxLayout.LayoutParams layoutParams = new FlexboxLayout.LayoutParams(
-                    133, 133);
-            view.addView(textView, layoutParams);
-        }
+//        RatioWebImageView ratioWebImageView = findViewById(R.id.ratio);
+//        ratioWebImageView.setWHRatio(1);
+//
+//        FlexboxLayout view = findViewById(R.id.flex);
+//        view.setFlexWrap(FlexWrap.WRAP);
+//        for (int i = 0; i < 50; i++) {
+//            TextView textView = new TextView(this);
+//            textView.setGravity(Gravity.CENTER);
+//            textView.setText(i + "");
+//            textView.setBackgroundResource(R.drawable.drawable);
+//            FlexboxLayout.LayoutParams layoutParams = new FlexboxLayout.LayoutParams(
+//                    133, 133);
+//            view.addView(textView, layoutParams);
+//        }
     }
 
     private void initItems() {
@@ -56,11 +62,36 @@ public class ViewMainActivity extends Activity {
         mList.add(new ViewItemBean("rx test", "com.sunladder.test.sample.RxTestAct"));
         mList.add(new ViewItemBean("clayout 5 scroll types",
                 "com.sunladder.view.coordinator.ClayoutNormalActivity"));
+
+        for (int i = 0; i < 100; i++) {
+
+            mList.add(new ViewItemBean(i + "", null));
+        }
     }
 
     private void initList() {
-        mViewMainList.setLayoutManager(
-                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        final MeasureStrategy measureStrategy = new Builder()
+                .setStretchToLineHeight(true)
+                .setOverWidthState(MeasureStrategy.OVER_WIDTH_JUST_LAYOUT)
+                .setAlignMode(MeasureStrategy.ALIGN_MODE_CENTER)
+                .build();
+        TagLayoutManager tagLayoutManager = new TagLayoutManager(100, false,
+                new DefaultMeasureStrategyGroup() {
+                    @Override
+                    public MeasureStrategy getGlobalStrategy() {
+                        return measureStrategy;
+                    }
+
+                    @Override
+                    public int lineMaxView(int lineNum) {
+                        if (lineNum == 0) {
+                            return 1;
+                        }
+                        return super.lineMaxView(lineNum);
+                    }
+                });
+        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
+        mViewMainList.setLayoutManager(tagLayoutManager);
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
@@ -89,14 +120,25 @@ public class ViewMainActivity extends Activity {
             textView.setGravity(Gravity.CENTER);
             textView.setPadding(0, 30, 0, 30);
             RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
-                    RecyclerView.LayoutParams.MATCH_PARENT, 120);
+                    LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             textView.setLayoutParams(layoutParams);
+
+//            View view = new View(parent.getContext());
+//            view.setLayoutParams(new LayoutParams(100, 120));
+//            view.setBackgroundColor(Color.parseColor("#00ff00"));
             return new ViewItemHolder(textView);
         }
 
         @Override
         public void onBindViewHolder(ViewItemHolder holder, int position) {
             View itemView = holder.itemView;
+
+            if (position == 1) {
+                itemView.getLayoutParams().height = 300;
+                itemView.getLayoutParams().width = 1500;
+                itemView.setLayoutParams(itemView.getLayoutParams());
+            }
+
             TextView textView = itemView instanceof TextView ? ((TextView) itemView) : null;
             if (textView != null) {
                 final ViewItemBean itemBean = mList.get(position);

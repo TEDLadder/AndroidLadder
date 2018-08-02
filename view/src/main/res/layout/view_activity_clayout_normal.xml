@@ -5,183 +5,183 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ToggleButton
-        android:id="@+id/change_bt"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:textOff="next"
-        android:textOn="next"/>
+    <!--<ToggleButton-->
+        <!--android:id="@+id/change_bt"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:textOff="next"-->
+        <!--android:textOn="next"/>-->
 
-    <LinearLayout
-        android:id="@+id/page_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/page_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
 
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
 
-            <android.support.design.widget.AppBarLayout
-                android:id="@+id/appbar1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/appbar1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="20dp"
-                    app:layout_scrollFlags="scroll"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-
-            </android.support.design.widget.AppBarLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-        </android.support.design.widget.CoordinatorLayout>
-
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <android.support.design.widget.AppBarLayout
-                android:id="@+id/appbar2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="20dp"
-                    app:layout_scrollFlags="scroll|enterAlways"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--android:minHeight="20dp"-->
+                    <!--app:layout_scrollFlags="scroll"-->
+                    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
 
 
-            </android.support.design.widget.AppBarLayout>
+            <!--</android.support.design.widget.AppBarLayout>-->
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
 
-        </android.support.design.widget.CoordinatorLayout>
+        <!--</android.support.design.widget.CoordinatorLayout>-->
 
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
 
-            <android.support.design.widget.AppBarLayout
-                android:id="@+id/appbar3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/appbar2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar3"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="40dp"
-                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-
-            </android.support.design.widget.AppBarLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-        </android.support.design.widget.CoordinatorLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/page_2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <android.support.design.widget.AppBarLayout
-                android:id="@+id/appbar4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar4"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="50dp"
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--android:minHeight="20dp"-->
+                    <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
 
 
-            </android.support.design.widget.AppBarLayout>
+            <!--</android.support.design.widget.AppBarLayout>-->
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
 
-        </android.support.design.widget.CoordinatorLayout>
+        <!--</android.support.design.widget.CoordinatorLayout>-->
 
-        <android.support.design.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
 
-            <android.support.design.widget.AppBarLayout
-                android:id="@+id/appbar5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/appbar3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar5"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:background="?attr/colorPrimary"
-                    app:layout_scrollFlags="scroll|snap"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar3"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--android:minHeight="40dp"-->
+                    <!--app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"-->
+                    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
 
 
-            </android.support.design.widget.AppBarLayout>
+            <!--</android.support.design.widget.AppBarLayout>-->
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
 
-        </android.support.design.widget.CoordinatorLayout>
+        <!--</android.support.design.widget.CoordinatorLayout>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/page_2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/appbar4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar4"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--android:minHeight="50dp"-->
+                    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+                    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
+
+            <!--</android.support.design.widget.AppBarLayout>-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+        <!--</android.support.design.widget.CoordinatorLayout>-->
+
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/appbar5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar5"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--app:layout_scrollFlags="scroll|snap"-->
+                    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
+
+            <!--</android.support.design.widget.AppBarLayout>-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+        <!--</android.support.design.widget.CoordinatorLayout>-->
+
+    <!--</LinearLayout>-->
 
 </RelativeLayout>
 
