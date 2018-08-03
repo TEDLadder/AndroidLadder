@@ -13,7 +13,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayout;
-import com.sunladder.view.pic.display.TagLayoutManager;
+import com.sunladder.view.tag.MeasureStrategy;
+import com.sunladder.view.tag.MeasureStrategy.Builder;
+import com.sunladder.view.tag.MeasureStrategy.DefaultMeasureStrategyGroup;
+import com.sunladder.view.tag.TagLayoutManager;
 import com.sunladder.view.testview.RatioWebImageView;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +72,24 @@ public class ViewMainActivity extends Activity {
     }
 
     private void initList() {
-        mViewMainList.setLayoutManager(new TagLayoutManager());
+        final MeasureStrategy measureStrategy = new Builder()
+                .setStretchToLineHeight(true)
+                .setOverWidthState(MeasureStrategy.OVER_WIDTH_RIGHT_TO_END)
+                .build();
+        TagLayoutManager tagLayoutManager = new TagLayoutManager(3, false,
+                new DefaultMeasureStrategyGroup() {
+                    @Override
+                    public MeasureStrategy getGlobalStrategy() {
+                        return measureStrategy;
+                    }
+
+                    @Override
+                    public boolean newLine(int index) {
+                        return index == 2;
+                    }
+                });
+
+        mViewMainList.setLayoutManager(tagLayoutManager);
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
