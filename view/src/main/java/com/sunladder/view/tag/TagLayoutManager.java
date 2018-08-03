@@ -45,6 +45,8 @@ public class TagLayoutManager extends RecyclerView.LayoutManager {
     public TagLayoutManager(int maxLine, boolean reverse,
             MeasureStrategyGroup measureStrategyConfig) {
 
+        setAutoMeasureEnabled(true);
+
         this.mMaxLine = maxLine;
         this.mReverse = reverse;
 
@@ -61,6 +63,8 @@ public class TagLayoutManager extends RecyclerView.LayoutManager {
     @Override
     public void onLayoutChildren(Recycler recycler, State state) {
         detachAndScrapAttachedViews(recycler);
+
+        int heightMode = getHeightMode();
 
         borderLeft = getPaddingLeft();
         borderRight = getWidth() - getPaddingRight();
@@ -90,10 +94,37 @@ public class TagLayoutManager extends RecyclerView.LayoutManager {
         }
     }
 
-    @Override
-    public void onDetachedFromWindow(RecyclerView view, Recycler recycler) {
-        super.onDetachedFromWindow(view, recycler);
-    }
+//    @Override
+//    public void onMeasure(Recycler recycler, State state, int widthSpec, int heightSpec) {
+//        int modeWidth = MeasureSpec.getMode(widthSpec);
+//        int sizeWidth = MeasureSpec.getSize(widthSpec);
+//        int modeHeight = MeasureSpec.getMode(heightSpec);
+//        int sizeHeight = MeasureSpec.getSize(heightSpec);
+//
+//        int desireWidth, desireHeight;
+//        switch (modeWidth) {
+//            case MeasureSpec.AT_MOST:
+//                desireWidth = mTagLine.lineRight - mTagLine.lineLeft
+//                        + getPaddingLeft() + getPaddingRight();
+//                desireWidth = Math.min(desireWidth, sizeWidth);
+//                break;
+//            default:
+//                desireWidth = sizeWidth;
+//                break;
+//        }
+//        switch (modeHeight) {
+//            case MeasureSpec.AT_MOST:
+//                desireHeight = mTagLine.lineBottom - mTagLine.lineTop
+//                        + getPaddingTop() + getPaddingBottom();
+//                desireHeight = Math.min(desireHeight, sizeHeight);
+//                break;
+//            default:
+//                desireHeight = sizeHeight;
+//                break;
+//        }
+//
+//        setMeasuredDimension(desireWidth, desireHeight);
+//    }
 
     /**
      * view遍历状态
@@ -252,6 +283,7 @@ public class TagLayoutManager extends RecyclerView.LayoutManager {
             return mMeasureStrategyConfig != null
                     ? mMeasureStrategyConfig.newLine(index)
                     : false;
+
         }
     }
 

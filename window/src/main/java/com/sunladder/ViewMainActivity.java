@@ -78,15 +78,15 @@ public class ViewMainActivity extends Activity {
                 .build();
         TagLayoutManager tagLayoutManager = new TagLayoutManager(3, false,
                 new DefaultMeasureStrategyGroup() {
-                    @Override
-                    public MeasureStrategy getGlobalStrategy() {
-                        return measureStrategy;
-                    }
-
-                    @Override
-                    public boolean newLine(int index) {
-                        return index == 2;
-                    }
+//                    @Override
+//                    public MeasureStrategy getGlobalStrategy() {
+//                        return measureStrategy;
+//                    }
+//
+//                    @Override
+//                    public boolean newLine(int index) {
+//                        return index == 2;
+//                    }
                 });
 
         mViewMainList.setLayoutManager(tagLayoutManager);
