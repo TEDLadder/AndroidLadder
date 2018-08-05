@@ -11,13 +11,11 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.google.android.flexbox.FlexWrap;
-import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayoutManager;
 import com.sunladder.view.tag.MeasureStrategy;
 import com.sunladder.view.tag.MeasureStrategy.Builder;
 import com.sunladder.view.tag.MeasureStrategy.DefaultMeasureStrategyGroup;
 import com.sunladder.view.tag.TagLayoutManager;
-import com.sunladder.view.testview.RatioWebImageView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,20 +37,20 @@ public class ViewMainActivity extends Activity {
 
 //        startDefault();
 
-        RatioWebImageView ratioWebImageView = findViewById(R.id.ratio);
-        ratioWebImageView.setWHRatio(1);
-
-        FlexboxLayout view = findViewById(R.id.flex);
-        view.setFlexWrap(FlexWrap.WRAP);
-        for (int i = 0; i < 50; i++) {
-            TextView textView = new TextView(this);
-            textView.setGravity(Gravity.CENTER);
-            textView.setText(i + "");
-            textView.setBackgroundResource(R.drawable.drawable);
-            FlexboxLayout.LayoutParams layoutParams = new FlexboxLayout.LayoutParams(
-                    133, 133);
-            view.addView(textView, layoutParams);
-        }
+//        RatioWebImageView ratioWebImageView = findViewById(R.id.ratio);
+//        ratioWebImageView.setWHRatio(1);
+//
+//        FlexboxLayout view = findViewById(R.id.flex);
+//        view.setFlexWrap(FlexWrap.WRAP);
+//        for (int i = 0; i < 50; i++) {
+//            TextView textView = new TextView(this);
+//            textView.setGravity(Gravity.CENTER);
+//            textView.setText(i + "");
+//            textView.setBackgroundResource(R.drawable.drawable);
+//            FlexboxLayout.LayoutParams layoutParams = new FlexboxLayout.LayoutParams(
+//                    133, 133);
+//            view.addView(textView, layoutParams);
+//        }
     }
 
     private void initItems() {
@@ -76,7 +74,7 @@ public class ViewMainActivity extends Activity {
                 .setStretchToLineHeight(true)
                 .setOverWidthState(MeasureStrategy.OVER_WIDTH_RIGHT_TO_END)
                 .build();
-        TagLayoutManager tagLayoutManager = new TagLayoutManager(3, false,
+        TagLayoutManager tagLayoutManager = new TagLayoutManager(-1, false,
                 new DefaultMeasureStrategyGroup() {
 //                    @Override
 //                    public MeasureStrategy getGlobalStrategy() {
@@ -88,7 +86,7 @@ public class ViewMainActivity extends Activity {
 //                        return index == 2;
 //                    }
                 });
-
+        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
         mViewMainList.setLayoutManager(tagLayoutManager);
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
@@ -133,6 +131,7 @@ public class ViewMainActivity extends Activity {
 
             if (position == 1) {
                 itemView.getLayoutParams().height = 300;
+                itemView.getLayoutParams().width = 300;
                 itemView.setLayoutParams(itemView.getLayoutParams());
             }
 

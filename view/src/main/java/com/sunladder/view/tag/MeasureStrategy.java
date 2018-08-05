@@ -89,8 +89,6 @@ public final class MeasureStrategy {
         MeasureStrategy getLineStrategy(int lineNum);
 
         MeasureStrategy getGlobalStrategy();
-
-        boolean newLine(int index);
     }
 
     /**
@@ -121,11 +119,6 @@ public final class MeasureStrategy {
         @Override
         public MeasureStrategy getGlobalStrategy() {
             return globalStrategy;
-        }
-
-        @Override
-        public boolean newLine(int index) {
-            return false;
         }
     }
 }
