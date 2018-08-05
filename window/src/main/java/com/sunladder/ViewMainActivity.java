@@ -72,19 +72,23 @@ public class ViewMainActivity extends Activity {
     private void initList() {
         final MeasureStrategy measureStrategy = new Builder()
                 .setStretchToLineHeight(true)
-                .setOverWidthState(MeasureStrategy.OVER_WIDTH_RIGHT_TO_END)
+                .setOverWidthState(MeasureStrategy.OVER_WIDTH_JUST_LAYOUT)
+                .setAlignMode(MeasureStrategy.ALIGN_MODE_CENTER)
                 .build();
-        TagLayoutManager tagLayoutManager = new TagLayoutManager(-1, false,
+        TagLayoutManager tagLayoutManager = new TagLayoutManager(100, false,
                 new DefaultMeasureStrategyGroup() {
-//                    @Override
-//                    public MeasureStrategy getGlobalStrategy() {
-//                        return measureStrategy;
-//                    }
-//
-//                    @Override
-//                    public boolean newLine(int index) {
-//                        return index == 2;
-//                    }
+                    @Override
+                    public MeasureStrategy getGlobalStrategy() {
+                        return measureStrategy;
+                    }
+
+                    @Override
+                    public int lineMaxView(int lineNum) {
+                        if (lineNum == 0) {
+                            return 1;
+                        }
+                        return super.lineMaxView(lineNum);
+                    }
                 });
         FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
         mViewMainList.setLayoutManager(tagLayoutManager);
@@ -131,7 +135,7 @@ public class ViewMainActivity extends Activity {
 
             if (position == 1) {
                 itemView.getLayoutParams().height = 300;
-                itemView.getLayoutParams().width = 300;
+                itemView.getLayoutParams().width = 1500;
                 itemView.setLayoutParams(itemView.getLayoutParams());
             }
 

@@ -39,7 +39,7 @@ class LineHelper {
     private static final int LAYOUT_DIRECTION_COLUMN = 2;
     private static final int LAYOUT_DIRECTION_COLUMN_REVERSE = 3;
 
-    private final int mLayoutDirection;
+    private int mLayoutDirection;
 
     /**
      * 布局策略
@@ -67,6 +67,8 @@ class LineHelper {
                 ? layoutDirection
                 : LAYOUT_DIRECTION_ROW;
 
+        mLayoutDirection = LAYOUT_DIRECTION_ROW;
+
         mLayoutManager = layoutManager;
         mMeasureStrategyGroup = measureStrategyGroup;
 
@@ -77,7 +79,7 @@ class LineHelper {
         mViewQueue = new LinkedList<>();
     }
 
-    void setParentState(int widthMode, int heightMode, int left, int top, int right, int bottom) {
+    void init(int widthMode, int heightMode, int left, int top, int right, int bottom) {
         reset();
         mParentWidthMode = widthMode;
         mParentHeightMode = heightMode;
@@ -103,6 +105,7 @@ class LineHelper {
     static final int ADD_STATE_STOP = -1;
     static final int ADD_STATE_NEXT_ITEM = 0;
     static final int ADD_STATE_NEW_LINE = 1;
+    static final int ADD_STATE_ABORT_ITEM = 2;
 
     int measureChildItem(int index, View view) {
         if (mLayoutManager == null) {
@@ -113,9 +116,11 @@ class LineHelper {
         }
 
         // 是否需要换行
-        final int lineRight = mLineBounds.right;
-        final int borderRight = mParentBounds.right;
-        if (lineRight >= borderRight) {
+        boolean overLineWidth = mLineBounds.right >= mParentBounds.right;
+        int lineMaxViewCount =
+                mMeasureStrategyGroup != null ? mMeasureStrategyGroup.lineMaxView(mLineNum) : -1;
+        boolean lineMaxView = lineMaxViewCount > 0 && mViewQueue.size() >= lineMaxViewCount;
+        if (overLineWidth || lineMaxView) {
             return ADD_STATE_NEW_LINE;
         }
 
@@ -127,27 +132,35 @@ class LineHelper {
         int measuredHeight = view.getMeasuredHeight();
         if (itemStrategy.stretchToLineHeight && measuredHeight < lineHieght) {
             measuredHeight = lineHieght;
+            view.getLayoutParams().height = lineHieght;
         }
 
+        int desireWidth = mLineBounds.right + measuredWidth;
         int desireHeight = mLineBounds.top + measuredHeight;
-        int restWidth = mParentBounds.right - mLineBounds.right;
+
         if (desireHeight > mParentBounds.bottom && !parentHeightInfinite()) {
             return ADD_STATE_STOP;
-        } else if (measuredWidth > restWidth) {
+        } else if (desireWidth > mParentBounds.right) {
             switch (itemStrategy.overWidthState) {
                 case MeasureStrategy.OVER_WIDTH_RIGHT_TO_END:
-                    view.getLayoutParams().width = restWidth;
+                    view.getLayoutParams().width = mParentBounds.right - mLineBounds.right;
                     mLayoutManager.measureChildWithMargins(view, 0, 0);
                     break;
                 case MeasureStrategy.OVER_WIDTH_JUST_LAYOUT:
                     break;
-                default:
-                    return ADD_STATE_NEW_LINE;
+                default: {
+                    // 单个item超过parent width换行模式下，丢弃
+                    if (measuredWidth > getParentWidth()) {
+                        return ADD_STATE_NEXT_ITEM;
+                    } else {
+                        return ADD_STATE_NEW_LINE;
+                    }
+                }
             }
         }
 
-        mLineBounds.right = mLineBounds.right + measuredWidth;
-        mLineBounds.bottom = mLineBounds.top + measuredHeight;
+        mLineBounds.right = desireWidth;
+        mLineBounds.bottom = Math.max(mLineBounds.bottom, desireHeight);
 
         mViewQueue.add(view);
 
@@ -228,6 +241,13 @@ class LineHelper {
     }
 
     void recycle() {
+        if (mViewQueue.size() > 0) {
+            layoutLine();
+        }
+        reset();
+    }
+
+    private void reset() {
         mParentWidthMode = 0;
         mParentHeightMode = 0;
 
@@ -238,10 +258,6 @@ class LineHelper {
         mLineNum = 0;
         mLineViewCount = 0;
         mViewQueue.clear();
-    }
-
-    private void reset() {
-        recycle();
     }
 
     private void nextLine() {

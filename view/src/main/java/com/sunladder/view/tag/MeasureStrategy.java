@@ -45,6 +45,8 @@ public final class MeasureStrategy {
 
     int alignMode;
 
+    boolean newLine;
+
     public static class Builder {
 
         int overWidthState = OVER_WIDTH_NEW_LINE;
@@ -89,6 +91,8 @@ public final class MeasureStrategy {
         MeasureStrategy getLineStrategy(int lineNum);
 
         MeasureStrategy getGlobalStrategy();
+
+        int lineMaxView(int lineNum);
     }
 
     /**
@@ -119,6 +123,11 @@ public final class MeasureStrategy {
         @Override
         public MeasureStrategy getGlobalStrategy() {
             return globalStrategy;
+        }
+
+        @Override
+        public int lineMaxView(int lineNum) {
+            return -1;
         }
     }
 }

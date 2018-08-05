@@ -43,26 +43,28 @@ public class TagLayoutManager extends RecyclerView.LayoutManager {
         int borderRight = getWidth() - getPaddingRight();
         int borderTop = getPaddingTop();
         int borderBottom = getHeight() - getPaddingBottom();
-        mLineHelper.setParentState(getWidthMode(), getHeightMode(),
+
+        mLineHelper.init(getWidthMode(), getHeightMode(),
                 borderLeft, borderTop, borderRight, borderBottom);
 
         int index = 0;
         while (index < getItemCount() && mLineHelper.notFull()) {
+
+            if (index > 90) {
+                System.out.println(1);
+            }
+
             View itemView = recycler.getViewForPosition(index);
             int addState = mLineHelper.measureChildItem(index, itemView);
-            switch (addState) {
-                case LineHelper.ADD_STATE_NEXT_ITEM:
-                    index++;
-                    break;
-                case LineHelper.ADD_STATE_NEW_LINE:
-                    mLineHelper.layoutLine();
-                    index++;
-                    break;
-                default:
-                    mLineHelper.recycle();
-                    return;
+            if (addState == LineHelper.ADD_STATE_NEXT_ITEM) {
+                index++;
+            } else if (addState == LineHelper.ADD_STATE_NEW_LINE) {
+                mLineHelper.layoutLine();
+            } else {
+                break;
             }
         }
+        mLineHelper.recycle();
     }
 
     interface CallBack {
