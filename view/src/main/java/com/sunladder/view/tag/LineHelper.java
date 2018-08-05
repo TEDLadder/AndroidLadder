@@ -25,7 +25,7 @@ class LineHelper {
      */
     private static final int MAX_LINE_NOT_SET = -1;
 
-    private final int mMaxLine;
+    private int mMaxLine;
 
     /**
      * 行排列
@@ -159,9 +159,7 @@ class LineHelper {
             return;
         }
 
-        final int parentWidth = getParentWidth();
         final boolean leftToRight = mLayoutDirection == LAYOUT_DIRECTION_ROW;
-        int totalWidth = 0;
 
         int layoutX = mLineBounds.left;
         while (!mViewQueue.isEmpty()) {
@@ -209,14 +207,20 @@ class LineHelper {
             right = Math.min(right, mParentBounds.right);
             bottom = Math.min(bottom, mParentBounds.bottom);
 
-            totalWidth += (right - left);
-            if (!leftToRight) {
-                int extra = parentWidth - totalWidth;
-                left = left + extra;
-                right = right + extra;
+            // 反方向计算
+            int realLeft;
+            int realRight;
+            if (leftToRight) {
+                realLeft = left;
+                realRight = right;
+            } else {
+                // x1 + x2 = 2y = left + right
+                int center = mParentBounds.left + mParentBounds.right;
+                realLeft = center - right;
+                realRight = center - left;
             }
 
-            mLayoutManager.layoutDecoratedWithMargins(item, left, top, right, bottom);
+            mLayoutManager.layoutDecoratedWithMargins(item, realLeft, top, realRight, bottom);
             layoutX = right;
         }
 
