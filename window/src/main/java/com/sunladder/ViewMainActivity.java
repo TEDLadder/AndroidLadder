@@ -11,6 +11,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.sunladder.view.tag.MeasureStrategy;
 import com.sunladder.view.tag.MeasureStrategy.Builder;
@@ -63,10 +65,10 @@ public class ViewMainActivity extends Activity {
         mList.add(new ViewItemBean("clayout 5 scroll types",
                 "com.sunladder.view.coordinator.ClayoutNormalActivity"));
 
-        for (int i = 0; i < 100; i++) {
-
-            mList.add(new ViewItemBean(i + "", null));
-        }
+//        for (int i = 0; i < 15; i++) {
+//
+//            mList.add(new ViewItemBean(i + "", null));
+//        }
     }
 
     private void initList() {
@@ -91,7 +93,10 @@ public class ViewMainActivity extends Activity {
                     }
                 });
         FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
-        mViewMainList.setLayoutManager(tagLayoutManager);
+        flexboxLayoutManager.setFlexDirection(FlexDirection.ROW);
+        flexboxLayoutManager.setFlexWrap(FlexWrap.NOWRAP);
+        flexboxLayoutManager.setMaxLine(1);
+        mViewMainList.setLayoutManager(flexboxLayoutManager);
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
@@ -119,7 +124,7 @@ public class ViewMainActivity extends Activity {
             TextView textView = new TextView(parent.getContext());
             textView.setGravity(Gravity.CENTER);
             textView.setPadding(0, 30, 0, 30);
-            RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(
+            FlexboxLayoutManager.LayoutParams layoutParams = new FlexboxLayoutManager.LayoutParams(
                     LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             textView.setLayoutParams(layoutParams);
 
@@ -133,11 +138,11 @@ public class ViewMainActivity extends Activity {
         public void onBindViewHolder(ViewItemHolder holder, int position) {
             View itemView = holder.itemView;
 
-            if (position == 1) {
-                itemView.getLayoutParams().height = 300;
-                itemView.getLayoutParams().width = 1500;
-                itemView.setLayoutParams(itemView.getLayoutParams());
-            }
+//            if (position == 1) {
+//                itemView.getLayoutParams().height = 300;
+//                itemView.getLayoutParams().width = 300;
+//                itemView.setLayoutParams(itemView.getLayoutParams());
+//            }
 
             TextView textView = itemView instanceof TextView ? ((TextView) itemView) : null;
             if (textView != null) {

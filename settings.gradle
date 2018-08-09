@@ -1,1 +1,1 @@
-include ':window', ':view', ':common', ':test'
+include ':window', ':view', ':common', ':test', ':oldversion', ':newversion'
