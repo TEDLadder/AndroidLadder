@@ -2,22 +2,16 @@ package com.sunladder;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
+import android.support.v7.widget.RecyclerView.LayoutParams;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.google.android.flexbox.FlexDirection;
-import com.google.android.flexbox.FlexWrap;
-import com.google.android.flexbox.FlexboxLayoutManager;
-import com.sunladder.view.tag.MeasureStrategy;
-import com.sunladder.view.tag.MeasureStrategy.Builder;
-import com.sunladder.view.tag.MeasureStrategy.DefaultMeasureStrategyGroup;
-import com.sunladder.view.tag.TagLayoutManager;
+import com.sunladder.view.CustomLinearLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,11 +22,27 @@ public class ViewMainActivity extends Activity {
 
     private final List<ViewItemBean> mList = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_activity_main);
         ButterKnife.bind(this);
+//        ViewGroup inflate = (ViewGroup) LayoutInflater.from(this)
+//                .inflate(R.layout.view_activity_tagpop, null);
+//        setContentView(inflate);
+//
+//        final TagPopupWindow tagPopupWindow = new TagPopupWindow(this);
+//
+//        for (int i = 0; i < inflate.getChildCount(); i++) {
+//            final View childAt = inflate.getChildAt(i);
+//            childAt.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    tagPopupWindow.showTagInfo(ViewMainActivity.this, childAt, "123123123\n13\n13\n13\n13");
+//                }
+//            });
+//        }
 
         initItems();
         initList();
@@ -65,38 +75,38 @@ public class ViewMainActivity extends Activity {
         mList.add(new ViewItemBean("clayout 5 scroll types",
                 "com.sunladder.view.coordinator.ClayoutNormalActivity"));
 
-//        for (int i = 0; i < 15; i++) {
-//
-//            mList.add(new ViewItemBean(i + "", null));
-//        }
+        for (int i = 0; i < 15; i++) {
+
+            mList.add(new ViewItemBean(i + "", null));
+        }
     }
 
     private void initList() {
-        final MeasureStrategy measureStrategy = new Builder()
-                .setStretchToLineHeight(true)
-                .setOverWidthState(MeasureStrategy.OVER_WIDTH_JUST_LAYOUT)
-                .setAlignMode(MeasureStrategy.ALIGN_MODE_CENTER)
-                .build();
-        TagLayoutManager tagLayoutManager = new TagLayoutManager(100, false,
-                new DefaultMeasureStrategyGroup() {
-                    @Override
-                    public MeasureStrategy getGlobalStrategy() {
-                        return measureStrategy;
-                    }
-
-                    @Override
-                    public int lineMaxView(int lineNum) {
-                        if (lineNum == 0) {
-                            return 1;
-                        }
-                        return super.lineMaxView(lineNum);
-                    }
-                });
-        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
-        flexboxLayoutManager.setFlexDirection(FlexDirection.ROW);
-        flexboxLayoutManager.setFlexWrap(FlexWrap.NOWRAP);
-        flexboxLayoutManager.setMaxLine(1);
-        mViewMainList.setLayoutManager(flexboxLayoutManager);
+//        final MeasureStrategy measureStrategy = new Builder()
+//                .setStretchToLineHeight(true)
+//                .setOverWidthState(MeasureStrategy.OVER_WIDTH_JUST_LAYOUT)
+//                .setAlignMode(MeasureStrategy.ALIGN_MODE_CENTER)
+//                .build();
+//        TagLayoutManager tagLayoutManager = new TagLayoutManager(100, false,
+//                new DefaultMeasureStrategyGroup() {
+//                    @Override
+//                    public MeasureStrategy getGlobalStrategy() {
+//                        return measureStrategy;
+//                    }
+//
+//                    @Override
+//                    public int lineMaxView(int lineNum) {
+//                        if (lineNum == 0) {
+//                            return 1;
+//                        }
+//                        return super.lineMaxView(lineNum);
+//                    }
+//                });
+//        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this);
+//        flexboxLayoutManager.setFlexDirection(FlexDirection.ROW);
+//        flexboxLayoutManager.setFlexWrap(FlexWrap.NOWRAP);
+//        flexboxLayoutManager.setMaxLine(1);
+        mViewMainList.setLayoutManager(new CustomLinearLayoutManager(this));
         mViewMainList.setAdapter(new ViewItemAdapter());
     }
 
@@ -121,17 +131,18 @@ public class ViewMainActivity extends Activity {
 
         @Override
         public ViewItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            TextView textView = new TextView(parent.getContext());
-            textView.setGravity(Gravity.CENTER);
-            textView.setPadding(0, 30, 0, 30);
-            FlexboxLayoutManager.LayoutParams layoutParams = new FlexboxLayoutManager.LayoutParams(
-                    LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-            textView.setLayoutParams(layoutParams);
+//            TextView textView = new TextView(parent.getContext());
+//            textView.setGravity(Gravity.CENTER);
+//            textView.setPadding(0, 30, 0, 30);
+//            FlexboxLayoutManager.LayoutParams layoutParams = new FlexboxLayoutManager.LayoutParams(
+//                    LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//            textView.setLayoutParams(layoutParams);
 
-//            View view = new View(parent.getContext());
-//            view.setLayoutParams(new LayoutParams(100, 120));
-//            view.setBackgroundColor(Color.parseColor("#00ff00"));
-            return new ViewItemHolder(textView);
+            View view = new View(parent.getContext());
+            view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            view.setBackgroundColor(Color.parseColor("#00ff00"));
+            return new ViewItemHolder(view);
         }
 
         @Override
