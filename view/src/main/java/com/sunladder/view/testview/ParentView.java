@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/8/3
+ * Created by syzhugh on 2018/8/3
  */
 public class ParentView extends LinearLayout {
 

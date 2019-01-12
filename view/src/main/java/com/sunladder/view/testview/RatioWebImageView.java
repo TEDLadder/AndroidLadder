@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/8/2
+ * Created by syzhugh on 2018/8/2
  */
 public class RatioWebImageView extends android.support.v7.widget.AppCompatImageView {
 

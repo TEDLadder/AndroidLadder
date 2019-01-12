@@ -16,7 +16,7 @@ import java.util.Queue;
  * 2.列排列暂不支持
  * 3.gravity right 暂不支持
  * <p>
- * Created by Sun Yaozong on 2018/8/5
+ * Created by syzhugh on 2018/8/5
  */
 class LineHelper {
 

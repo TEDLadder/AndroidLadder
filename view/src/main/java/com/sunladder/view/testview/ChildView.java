@@ -8,7 +8,7 @@ import com.sunladder.common.log.Logger;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/8/1
+ * Created by syzhugh on 2018/8/1
  */
 public class ChildView extends View {
 

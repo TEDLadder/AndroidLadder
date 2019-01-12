@@ -9,7 +9,7 @@ import com.sunladder.view.tag.MeasureStrategy.MeasureStrategyGroup;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/8/2
+ * Created by syzhugh on 2018/8/2
  */
 public class TagLayoutManager extends RecyclerView.LayoutManager {
 

@@ -7,7 +7,7 @@ import com.sunladder.view.tag.TagDefaultAdapter.TagViewHolder;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/7/30
+ * Created by syzhugh on 2018/7/30
  */
 public class TagDefaultAdapter extends RecyclerView.Adapter<TagViewHolder> {
 

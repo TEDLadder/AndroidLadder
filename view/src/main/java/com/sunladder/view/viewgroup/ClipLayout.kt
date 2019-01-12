@@ -7,9 +7,9 @@ import android.widget.FrameLayout
 
 /**
  * Description:
- * Created by Sun Yaozong on 2019/1/12
+ * Created by syzhugh on 2019/1/12
  *
- * @author Sun Yaozong
+ * @author syzhugh
  */
 class ClipLayout @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

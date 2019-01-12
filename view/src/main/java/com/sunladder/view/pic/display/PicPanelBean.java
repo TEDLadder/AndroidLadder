@@ -1,7 +1,7 @@
 package com.sunladder.view.pic.display;
 
 /**
- * Created by Sun Yaozong on 2018/5/29.
+ * Created by syzhugh on 2018/5/29.
  */
 
 public class PicPanelBean implements IPicPanelBean {

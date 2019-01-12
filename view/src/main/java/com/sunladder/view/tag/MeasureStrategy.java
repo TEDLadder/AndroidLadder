@@ -2,7 +2,7 @@ package com.sunladder.view.tag;
 
 /**
  * Description:
- * Created by Sun Yaozong on 2018/8/3
+ * Created by syzhugh on 2018/8/3
  */
 public final class MeasureStrategy {
 
