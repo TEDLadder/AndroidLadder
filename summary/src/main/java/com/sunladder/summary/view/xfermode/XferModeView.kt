@@ -1,10 +1,7 @@
 package com.sunladder.summary.view.xfermode
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.PorterDuffXfermode
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 
@@ -19,32 +16,39 @@ class XferModeView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-    private val partWidth = 150
-    private val partOffset = partWidth / 2
+    private val part1Width = 200
     private val part1C = Color.RED
+    private val part2Width = 200
     private val part2C = Color.GREEN
+    private val partOffset = part1Width / 2
 
     private val mPaint = Paint()
     private var mNeedOffset = false
+    private val mAssistRect = RectF()
 
     var mXfermode: PorterDuffXfermode? = null
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val drawX = (measuredWidth - partWidth).toFloat() / 2
-        val drawY = (measuredHeight - partWidth).toFloat() / 2
+        val drawX = (measuredWidth - part1Width).toFloat() / 2
+        val drawY = (measuredHeight - part1Width).toFloat() / 2
 
         val layerID = canvas.saveLayer(0F, 0F, canvas.width.toFloat(), canvas.height.toFloat(),
                 mPaint, Canvas.ALL_SAVE_FLAG)
 
         mPaint.reset()
+        mPaint.flags = Paint.ANTI_ALIAS_FLAG
         mPaint.style = Paint.Style.FILL
-        mPaint.color = part1C
-        canvas.drawRect(drawX, drawY, drawX + partWidth, drawY + partWidth, mPaint)
+        mPaint.color = Color.RED
+        canvas.drawRect(drawX, drawY, drawX + part1Width, drawY + part1Width, mPaint)
+//        mAssistRect.set(drawX, drawY, drawX + part1Width, drawY + part1Width)
+//        canvas.drawRoundRect(mAssistRect, 20F, 20F, mPaint)
 
         mPaint.reset()
-        mPaint.xfermode = mXfermode
+        mPaint.flags = Paint.ANTI_ALIAS_FLAG
         mPaint.style = Paint.Style.FILL
+//        mPaint.style = Paint.Style.STROKE
+        mPaint.xfermode = mXfermode
         mPaint.color = part2C
         var part2DrawX = drawX
         var part2DrawY = drawY
@@ -52,10 +56,13 @@ class XferModeView @JvmOverloads constructor(
             part2DrawX += partOffset
             part2DrawY += partOffset
         }
-        canvas.drawRect(part2DrawX, part2DrawY, part2DrawX + partWidth, part2DrawY + partWidth, mPaint)
-        mPaint.xfermode = null;
+//        canvas.drawRect(part2DrawX, part2DrawY, part2DrawX + part2Width, part2DrawY + part2Width, mPaint)
+        mAssistRect.set(part2DrawX, part2DrawY, part2DrawX + part2Width, part2DrawY + part2Width)
+        canvas.drawRoundRect(mAssistRect, 20F, 20F, mPaint)
 
-        canvas.restoreToCount(layerID);
+        mPaint.xfermode = null
+
+        canvas.restoreToCount(layerID)
     }
 
     fun bind(xfermode: PorterDuffXfermode?, needOffset: Boolean = false) {

@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/viewXferModeItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.sunladder.summary.view.xfermode.XferModeView
-        android:id="@+id/viewXferModeItemV"
-        android:layout_width="wrap_content"
+    <com.sunladder.view.viewgroup.ClipLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_margin="20dp">
 
-</RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#ff0">
+
+            <TextView
+                android:id="@+id/viewXferModeItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.sunladder.summary.view.xfermode.XferModeView
+                android:id="@+id/viewXferModeItemV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </com.sunladder.view.viewgroup.ClipLayout>
+
+</FrameLayout>

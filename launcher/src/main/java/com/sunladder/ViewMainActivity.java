@@ -48,7 +48,7 @@ public class ViewMainActivity extends Activity {
                 "com.sunladder.view.coordinator.ClayoutNormalActivity"));
 
         // summary
-        mList.add(defaultAct = new ViewItemBean("summary xfermode",
+        mList.add(defaultAct = new ViewItemBean("summary mXfermode",
                 "com.sunladder.summary.view.xfermode.ViewXfermodeAct"));
     }
 

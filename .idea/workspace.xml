@@ -16,10 +16,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2884179d-dd28-4234-bfbe-100b4fa9b85f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/src/main/java/com/sunladder/view/viewgroup/ClipLayout.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/launcher/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/view/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,80 +46,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="summary_act_test_rx.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary/src/main/res/layout/summary_act_test_rx.xml">
+      <file leaf-file-name="ClipLayout.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/viewgroup/ClipLayout.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RxTestAct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/testRx/sample/RxTestAct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="420">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#45#168#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary/build.gradle">
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewMainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="244">
+              <caret line="16894" column="19" selection-start-line="16894" selection-start-column="19" selection-end-line="16894" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#394507#394508#0" expanded="true" />
+                <element signature="e#394575#394576#0" expanded="true" />
+                <element signature="e#550641#550642#0" expanded="true" />
+                <element signature="e#550678#550679#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/launcher/build.gradle">
+      <file leaf-file-name="TextView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/widget/TextView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XferModeView.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#45#267#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1034">
+              <caret line="6740" column="37" selection-start-line="6740" selection-start-column="37" selection-end-line="6740" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -123,8 +85,73 @@
       <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Canvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="493" column="15" selection-start-line="493" selection-start-column="15" selection-end-line="493" selection-end-column="15" />
+            <state relative-caret-position="244">
+              <caret line="1120" column="19" selection-start-line="1120" selection-start-column="19" selection-end-line="1120" selection-end-column="19" />
+              <folding>
+                <element signature="e#45417#45418#0" expanded="true" />
+                <element signature="e#45484#45485#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XferModeView.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="summary_items_view_xfermode.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Path.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="472" column="11" selection-start-line="472" selection-start-column="11" selection-end-line="472" selection-end-column="11" />
+              <folding>
+                <element signature="e#10168#10169#0" expanded="true" />
+                <element signature="e#10210#10211#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/launcher/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -135,26 +162,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin File" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>itemStrategy</find>
-      <find>lineRight</find>
-      <find>index</find>
-      <find>FlexDirection.ROW_REVERSE</find>
-      <find>line.*?(</find>
-      <find>MAX_LINE_NOT_SET</find>
       <find>layout</find>
       <find>mFlexDirection == FlexDirection.ROW_REVERSE</find>
       <find>layout.*?\(</find>
       <find>layoutSingleChildHorizontal</find>
       <find>mIsRtl</find>
       <find>mIsRtl.*?=</find>
-      <find>left</find>
       <find>Direc</find>
       <find>layoutHo</find>
       <find>layoutHor</find>
@@ -172,11 +192,19 @@
       <find>test.</find>
       <find>tagLayoutManager</find>
       <find>targetS</find>
+      <find>ViewXfermodeAct</find>
+      <find>part1C</find>
+      <find>canvas</find>
+      <find>mPaint</find>
+      <find>left</find>
+      <find>forceMoveTo</find>
+      <find>compile</find>
     </findStrings>
     <replaceStrings>
       <replace>compileSdkVersion 27</replace>
       <replace>com.android.support:appcompat-v7:27.1.0</replace>
       <replace>launcher</replace>
+      <replace>api</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -353,13 +381,13 @@
                 <option name="name" value="preDebugAndroidTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processDebugAndroidTestJavaRes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Compiles the releaseUnitTest kotlin." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileReleaseUnitTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugAndroidTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -602,14 +630,14 @@
                 <option name="name" value="testDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the Debug build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="installDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Compiles the debugAndroidTest kotlin." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugAndroidTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -942,13 +970,13 @@
                 <option name="name" value="javaPreCompileReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javaPreCompileRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Compiles the debugUnitTest kotlin." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugUnitTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1295,6 +1323,11 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debug kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
+                <option name="name" value="compileDebugKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
@@ -1318,6 +1351,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
                 <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the releaseUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
+                <option name="name" value="compileReleaseUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
@@ -1473,6 +1511,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
                 <option name="name" value="preparePUBLISHED_DEXDebugAndroidTestForPublishing" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
+                <option name="name" value="compileDebugUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
@@ -1641,6 +1684,11 @@
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugAndroidTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
+                <option name="name" value="compileDebugAndroidTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
                 <option name="name" value="preBuild" />
               </ExternalTaskPojo>
@@ -1774,6 +1822,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
                 <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the release kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/common" />
+                <option name="name" value="compileReleaseKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -2001,6 +2054,11 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debug kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
+                <option name="name" value="compileDebugKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
@@ -2024,6 +2082,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
                 <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the releaseUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
+                <option name="name" value="compileReleaseUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
@@ -2183,6 +2246,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
                 <option name="name" value="preparePUBLISHED_DEXDebugAndroidTestForPublishing" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
+                <option name="name" value="compileDebugUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
@@ -2370,6 +2438,11 @@
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugAndroidTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
+                <option name="name" value="compileDebugAndroidTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
                 <option name="name" value="installDebug" />
@@ -2518,6 +2591,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
                 <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the release kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/launcher" />
+                <option name="name" value="compileReleaseKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -4176,6 +4254,11 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debug kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
+                <option name="name" value="compileDebugKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
@@ -4199,6 +4282,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
                 <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the releaseUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
+                <option name="name" value="compileReleaseUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
@@ -4354,6 +4442,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
                 <option name="name" value="preparePUBLISHED_DEXDebugAndroidTestForPublishing" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugUnitTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
+                <option name="name" value="compileDebugUnitTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
@@ -4522,6 +4615,11 @@
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles the debugAndroidTest kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
+                <option name="name" value="compileDebugAndroidTestKotlin" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
                 <option name="name" value="preBuild" />
               </ExternalTaskPojo>
@@ -4655,6 +4753,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
                 <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the release kotlin." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/view" />
+                <option name="name" value="compileReleaseKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -6054,7 +6157,6 @@
         <option value="$PROJECT_DIR$/view/src/main/java/com/sunladder/view/pic/display/TagLayoutManager.java" />
         <option value="$PROJECT_DIR$/view/src/main/res/layout/view_activity_clayout_normal.xml" />
         <option value="$PROJECT_DIR$/view/src/main/java/com/sunladder/view/coordinator/ClayoutNormalActivity.java" />
-        <option value="$PROJECT_DIR$/view/build.gradle" />
         <option value="$PROJECT_DIR$/window/build.gradle" />
         <option value="$PROJECT_DIR$/view/src/main/res/layout/view_activity_pic_nine_grid.xml" />
         <option value="$PROJECT_DIR$/view/src/main/java/com/sunladder/view/tag/LineLayoutHelper.java" />
@@ -6073,14 +6175,16 @@
         <option value="$PROJECT_DIR$/summary/src/main/res/layout/view_list_item_xfermode.xml" />
         <option value="$PROJECT_DIR$/summary/src/main/res/layout/activity_view_xfermode.xml" />
         <option value="$PROJECT_DIR$/summary/src/main/res/layout/summary_act_view_xfermode.xml" />
-        <option value="$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml" />
-        <option value="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/ViewXfermodeAct.kt" />
-        <option value="$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java" />
         <option value="$PROJECT_DIR$/summary/src/main/res/layout/layout.xml" />
         <option value="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/testRx/sample/RxTestAct.java" />
-        <option value="$PROJECT_DIR$/summary/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/launcher/build.gradle" />
+        <option value="$PROJECT_DIR$/summary/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/ViewXfermodeAct.kt" />
+        <option value="$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java" />
         <option value="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt" />
+        <option value="$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/ClipLayout.kt" />
+        <option value="$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml" />
+        <option value="$PROJECT_DIR$/view/build.gradle" />
       </list>
     </option>
   </component>
@@ -6201,6 +6305,68 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="xfermode" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="summary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="summary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AndroidLadder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AndroidLadder" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="view" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="viewgroup" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -6278,7 +6444,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.sunladder" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="VIewMA&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/launcher/src/main/java/com/sunladder/ViewMainActivity.java&#10;LinearLay&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-27/android/widget/LinearLayout.java&#10;ViewMain&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/java/com/sunladder/ViewMainActivity.java&#10;FlexLay&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxLayoutManager.java&#10;viewmain&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/res/layout/view_activity_main.xml&#10;LinearLayMa&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/LinearLayoutManager.java&#10;ViewM&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/java/com/sunladder/ViewMainActivity.java&#10;Recy&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;TagL&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/tag/TagLayoutManager.java&#10;Ni&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/pic/display/NineGridLayoutManager.java&#10;LinearLayout&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-26/android/widget/LinearLayout.java&#10;ChildVIew&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/testview/ChildView.java&#10;View.java&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-26/android/view/View.java&#10;RecyclerView&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;Flex&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxLayoutManager.java&#10;LineaLayout&#9;PSI&#9;JAVA://android.support.v7.widget.LinearLayoutManager&#10;ClayoutAc&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/coordinator/ClayoutNormalActivity.java&#10;view&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/res/layout/view_activity_main.xml&#10;Recycler&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/26.1.0/63d6891b399433c913fe91ce95a8456de02d367f/recyclerview-v7-26.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;FleL&#9;PSI&#9;JAVA://com.google.android.flexbox.FlexboxLayoutManager&#10;NineL&#9;PSI&#9;JAVA://com.sunladder.view.pic.display.NineGridLayoutManager" />
+    <property name="SearchEverywhereHistoryKey" value="TeView&#9;PSI&#9;JAVA://com.sunladder.view.text.ExpandTextView.CustomTextView&#10;VIewMA&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/launcher/src/main/java/com/sunladder/ViewMainActivity.java&#10;LinearLay&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-27/android/widget/LinearLayout.java&#10;ViewMain&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/java/com/sunladder/ViewMainActivity.java&#10;FlexLay&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxLayoutManager.java&#10;viewmain&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/res/layout/view_activity_main.xml&#10;LinearLayMa&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/LinearLayoutManager.java&#10;ViewM&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/java/com/sunladder/ViewMainActivity.java&#10;Recy&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;TagL&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/tag/TagLayoutManager.java&#10;Ni&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/pic/display/NineGridLayoutManager.java&#10;LinearLayout&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-26/android/widget/LinearLayout.java&#10;ChildVIew&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/testview/ChildView.java&#10;View.java&#9;FILE&#9;file:///Users/syz/Library/Android/sdk/sources/android-26/android/view/View.java&#10;RecyclerView&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.0/877b5b7b69188d19a2705de30ca29121457f5154/recyclerview-v7-27.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;Flex&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxLayoutManager.java&#10;LineaLayout&#9;PSI&#9;JAVA://android.support.v7.widget.LinearLayoutManager&#10;ClayoutAc&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/view/src/main/java/com/sunladder/view/coordinator/ClayoutNormalActivity.java&#10;view&#9;FILE&#9;file:///Users/syz/AndroidStudioProjects/AndroidLadder/window/src/main/res/layout/view_activity_main.xml&#10;Recycler&#9;FILE&#9;jar:///Users/syz/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/26.1.0/63d6891b399433c913fe91ce95a8456de02d367f/recyclerview-v7-26.1.0-sources.jar!/android/support/v7/widget/RecyclerView.java&#10;FleL&#9;PSI&#9;JAVA://com.google.android.flexbox.FlexboxLayoutManager&#10;NineL&#9;PSI&#9;JAVA://com.sunladder.view.pic.display.NineGridLayoutManager" />
     <property name="android.project.structure.last.selected" value="launcher" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -6498,9 +6664,9 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33042395" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329602" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.33042395" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -6684,73 +6850,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129260">
-          <caret line="6601" selection-start-line="6601" selection-end-line="6601" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/src/main/res/layout/view_activity_pic_nine_grid.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/support/v7/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="3132" column="59" lean-forward="true" selection-start-line="3132" selection-start-column="59" selection-end-line="3132" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/tag/TagDefaultAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Rect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="255" column="16" selection-start-line="255" selection-start-column="16" selection-end-line="255" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="1012" column="24" selection-start-line="1012" selection-start-column="16" selection-end-line="1012" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/1.0.0/c4c7f74d77a222833719306af2c4003bdacccc38/flexbox-1.0.0-sources.jar!/com/google/android/flexbox/FlexboxHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1744" column="9" selection-start-line="1744" selection-start-column="9" selection-end-line="1744" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/widget/LinearLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="1759" column="46" selection-start-line="1759" selection-start-column="37" selection-end-line="1759" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/testview/ParentView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/window/src/main/res/layout/view_activity_main.xml" />
     <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/tag/TagLayoutManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -6838,13 +6937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/testRx/rx1/RxRound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -6857,13 +6949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -6882,28 +6967,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13656" column="21" selection-start-line="13656" selection-start-column="21" selection-end-line="13656" selection-end-column="21" />
-          <folding>
-            <element signature="e#550641#550642#0" expanded="true" />
-            <element signature="e#550678#550679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="465" column="19" selection-start-line="465" selection-start-column="19" selection-end-line="465" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Paint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="1187" column="19" selection-start-line="1187" selection-start-column="11" selection-end-line="1187" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -6918,6 +6985,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="154" column="41" selection-start-line="154" selection-start-column="41" selection-end-line="154" selection-end-column="41" />
+          <folding>
+            <element signature="e#5431#5432#0" expanded="true" />
+            <element signature="e#5501#5502#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -6936,26 +7007,6 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/ViewXfermodeAct.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#45#479#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summary/src/main/res/layout/summary_act_test_rx.xml">
@@ -6985,47 +7036,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="256">
+          <caret line="967" column="16" selection-start-line="967" selection-start-column="16" selection-end-line="967" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#31188#31189#0" expanded="true" />
+            <element signature="e#31244#31245#0" expanded="true" />
+            <element signature="e#32095#32096#0" expanded="true" />
+            <element signature="e#32141#32142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summary/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="40">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/launcher/build.gradle">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/content/Context.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="163">
+          <caret line="3859" column="31" selection-start-line="3859" selection-start-column="31" selection-end-line="3859" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/ViewXfermodeAct.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#45#510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/src/main/java/com/sunladder/ViewMainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="3948" column="19" selection-start-line="3948" selection-start-column="19" selection-end-line="3948" selection-end-column="19" />
+          <folding>
+            <element signature="e#166867#166868#0" expanded="true" />
+            <element signature="e#166927#166928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/widget/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="1367" column="33" selection-start-line="1367" selection-start-column="19" selection-end-line="1367" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/drawable/Drawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="211" column="25" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/drawable/ColorDrawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="114" column="18" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/text/ExpandTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="155" column="58" selection-start-line="155" selection-start-column="58" selection-end-line="155" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.0/f734fb8b464907dc723c05aa6bfbaea63c29953/appcompat-v7-27.1.0-sources.jar!/android/support/v7/widget/AppCompatTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="16894" column="19" selection-start-line="16894" selection-start-column="19" selection-end-line="16894" selection-end-column="19" />
+          <folding>
+            <element signature="e#394507#394508#0" expanded="true" />
+            <element signature="e#394575#394576#0" expanded="true" />
+            <element signature="e#550641#550642#0" expanded="true" />
+            <element signature="e#550678#550679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1034">
+          <caret line="6740" column="37" selection-start-line="6740" selection-start-column="37" selection-end-line="6740" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="493" column="15" selection-start-line="493" selection-start-column="15" selection-end-line="493" selection-end-column="15" />
+        <state relative-caret-position="244">
+          <caret line="1120" column="19" selection-start-line="1120" selection-start-column="19" selection-end-line="1120" selection-end-column="19" />
+          <folding>
+            <element signature="e#45417#45418#0" expanded="true" />
+            <element signature="e#45484#45485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/graphics/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="472" column="11" selection-start-line="472" selection-start-column="11" selection-end-line="472" selection-end-column="11" />
+          <folding>
+            <element signature="e#10168#10169#0" expanded="true" />
+            <element signature="e#10210#10211#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summary/src/main/java/com/sunladder/summary/view/xfermode/XferModeView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="452">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summary/src/main/res/layout/summary_items_view_xfermode.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/src/main/java/com/sunladder/view/viewgroup/ClipLayout.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
-            <element signature="e#45#267#0" expanded="true" />
+            <element signature="e#45#168#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/launcher/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
