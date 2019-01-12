@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.sunladder"
-        minSdkVersion 25
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -41,8 +41,8 @@ dependencies {
 
     // base
     api project(':common')
+    api project(':view')
 
     // part
-    api project(':view')
-//    api project(':summary')
+    api project(':summary')
 }
